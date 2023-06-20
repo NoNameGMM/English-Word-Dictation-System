@@ -9,13 +9,12 @@
         h1 {text-align:center};
     </style>
 </head>
-<body>    
-    <h1>考纲单词默写系统</h1>
-    <p align="center">默写的单词：<b id="demo">获取失败...请寻找管理员</b></p>
-    <p align="center">请输入答案：<input type="text" name="wordwrite" value="" id="answer"/></p>
-    <p align="center"><input type="button" value="提交" onclick="get_value()"/></p>
-    <p align="center"><input type="button" value="下一个单词" onclick="loadword();document.getElementById('answer').value = ''"/></p>
-    <p align="center"><input type="text" id="answertrue" value="" style="display:none"/></p>
+<body background="background.png" style="background-size: 100% 100%; background-attachment: fixed; background-repeat:no-repeat; background-size:cover">
+    <h1 style="color:#FFFFFF">考纲单词默写系统</h1>
+    <p align="center" style="color:#FFFFFF">默写的单词：<b id="demo">获取失败...请寻找管理员</b></p>
+    <p align="center" style="color:#FFFFFF">请输入答案：<input type="text" name="wordwrite" value="" id="answer"/></p>
+    <p align="center" style="color:#FFFFFF"><input type="button" value="提交" onclick="get_value()"/><input type="button" value="清空" onclick="document.getElementById('answer').value = ''"/><input type="button" value="关于" onclick="information()"/></p>
+    <p align="center" style="color:#FFFFFF"><input type="text" id="answertrue" value="" style="display:none"/></p>
     <script>
         function get_value()
         {
@@ -23,11 +22,19 @@
             var right = document.getElementById("answertrue").value;
             if(answer == right)
             {    
-                alert("回答错误");
+                truely();
+                setTimeout(() => {
+                    document.getElementById('answer').value = '';
+                    loadword();
+                }, 1500);
             }
             else
             {
-                alert("回答正确");
+                wrongly();
+                setTimeout(() => {
+                    document.getElementById('answer').value = '';
+                    loadword();
+                }, 1500);
             }
         }
     </script>
