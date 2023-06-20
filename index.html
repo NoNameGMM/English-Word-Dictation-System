@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>考纲单词默写系统</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="index.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        h1 {text-align:center};
+    </style>
+</head>
+<body>    
+    <h1>考纲单词默写系统</h1>
+    <p align="center">默写的单词：<b id="demo">获取失败...请寻找管理员</b></p>
+    <p align="center">请输入答案：<input type="text" name="wordwrite" value="" id="answer"/></p>
+    <p align="center"><input type="button" value="提交" onclick="get_value()"/></p>
+    <p align="center"><input type="button" value="下一个单词" onclick="loadword();document.getElementById('answer').value = ''"/></p>
+    <p align="center"><input type="text" id="answertrue" value="" style="display:none"/></p>
+    <script>
+        function get_value()
+        {
+            var answer = document.getElementById("answer").value;
+            var right = document.getElementById("answertrue").value;
+            if(answer == right)
+            {    
+                alert("回答错误");
+            }
+            else
+            {
+                alert("回答正确");
+            }
+        }
+    </script>
+</body>
+</html>
