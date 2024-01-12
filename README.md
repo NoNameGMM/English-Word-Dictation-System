@@ -2,10 +2,10 @@
 # 英语单词默写系统
 a english word dictation system By NoNameGMM  
 NoNameGMM制作的英语单词默写系统  
-项目依赖：
-"electron": "^25.9.8"
-"electron-builder": "^24.9.1"
-"electron-packager": "^17.1.2"
+## 项目依赖：
+#### "electron": "^25.9.8"  
+#### "electron-builder": "^24.9.1"  
+#### "electron-packager": "^17.1.2"  
 
 # 更新日志
 ## v1.0.0
